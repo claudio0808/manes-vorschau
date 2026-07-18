@@ -1,0 +1,19 @@
+{
+  "name": "Manes am Bösch",
+  "short_name": "Manes",
+  "description": "Gutbürgerliche Gaststätte in Dormagen seit 1860. Steak-Freitag, Biergarten und Saal für Feiern.",
+  "lang": "de",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#F4F5F6",
+  "theme_color": "#2E3136",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

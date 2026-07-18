@@ -1,0 +1,62 @@
+{
+  "veranstaltungen": [
+    {
+      "id": "heimatabend-2026",
+      "titel": "Heimatabend",
+      "kategorie": "Party",
+      "datum": "Sa. 26.09.2026",
+      "datumISO": "2026-09-26",
+      "teaser": "Deutsch. Laut. Legendär. Von Heino bis Hosen, von Rosenberg bis Rammstein, aufgelegt von DJane annadream.",
+      "text": "Einmal im Jahr wird es bei uns richtig laut: Deutschrock, Schlager, NDW, Pop und Hip-Hop, aufgelegt von DJane annadream. Von Heino bis Hosen, von Rosenberg bis Rammstein, ein Abend für alle, die deutsche Musik und gute Stimmung lieben.\n\nEinlass ab 18 Jahren. Bändchenverkauf ab dem 28.07.2026 im Haus.",
+      "bild": "veranstaltungen/heimatabend.webp?v=2",
+      "pdf": "",
+      "infos": [
+        { "label": "Eintritt", "wert": "10,- €" },
+        { "label": "Einlass", "wert": "19.30 Uhr" },
+        { "label": "Alter", "wert": "ab 18 Jahre" },
+        { "label": "Bändchenverkauf", "wert": "ab 28.07.2026" }
+      ],
+      "featured": true,
+      "aktiv": true
+    },
+    {
+      "id": "spargel-am-boesch",
+      "titel": "Spargel am Bösch",
+      "kategorie": "Saisonaktion",
+      "datum": "15. bis 23. Mai",
+      "datumISO": "2026-05-15",
+      "teaser": "Das Spargelessen mit frischem Nievenheimer Stangenspargel, als mehrgängiges Menü.",
+      "text": "Wenn die Spargelzeit beginnt, wird bei uns aufgetischt: Das Spargelessen am Bösch mit frischem Nievenheimer Stangenspargel, serviert als mehrgängiges Menü.\n\nErdbeer-Aperitif, Spargelcremesuppe, Stangenspargel mit Salzkartoffeln, Kochschinken, Putensteak, Schweineschnitzel und Sauce Hollandaise, dazu Erdbeer-Joghurt-Mousse mit weißer Schokolade. Wein, Bier und Softdrinks sind inklusive.\n\nUm Anmeldung wird gebeten.",
+      "bild": "veranstaltungen/spargel-am-boesch.webp",
+      "pdf": "",
+      "infos": [
+        { "label": "Preis", "wert": "188,- € für 4 Personen" },
+        { "label": "Termine", "wert": "15., 16., 22. und 23. Mai" },
+        { "label": "Beginn", "wert": "17.30 bis 19.00 Uhr" },
+        { "label": "Anmeldung", "wert": "mail@manes.de" }
+      ],
+      "vorbei": true,
+      "featured": true,
+      "aktiv": true
+    },
+    {
+      "id": "bierhuette-wm-deutschland-curacao",
+      "titel": "Live-Übertragung in der Bierhütte",
+      "kategorie": "Live-Übertragung",
+      "datum": "So. 14.06.2026",
+      "datumISO": "2026-06-14",
+      "teaser": "WM 2026 unter freiem Himmel: Deutschland gegen Curaçao, live in unserer Bierhütte.",
+      "text": "WM 2026 unter freiem Himmel: Wir übertragen Deutschland gegen Curaçao live in unserer Bierhütte. Kommen Sie vorbei, sichern Sie sich einen guten Platz und fiebern Sie bei kühlem Böscher und bester Stimmung mit.\n\nDie Übertragung beginnt um 19.00 Uhr.",
+      "bild": "veranstaltungen/bier-huette.webp",
+      "pdf": "",
+      "infos": [
+        { "label": "Termin", "wert": "So. 14.06.2026, 19.00 Uhr" },
+        { "label": "Spiel", "wert": "Deutschland gegen Curaçao" },
+        { "label": "Ort", "wert": "Bierhütte im Biergarten" }
+      ],
+      "vorbei": true,
+      "featured": true,
+      "aktiv": true
+    }
+  ]
+}

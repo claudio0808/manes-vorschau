@@ -1,0 +1,37 @@
+{
+  "infoleiste": {
+    "aktiv": true,
+    "text": "Vom 10. bis 23. August: Restaurant und Theke geschlossen, Bierhütte und Biergarten bei schönem Wetter geöffnet. Mehr unter Aktuelles."
+  },
+  "ferien": {
+    "aktiv": true,
+    "titel": "10. bis 23. August 2026",
+    "text": "In dieser Zeit sind Restaurant und Theke geschlossen. Bei schönem Wetter haben Bierhütte und Biergarten geöffnet, mit Getränken und einer kleinen Snackkarte. Reservierungen sind in diesem Zeitraum nicht möglich.",
+    "zeiten": [
+      { "tag": "Montag", "zeit": "geschlossen" },
+      { "tag": "Dienstag bis Samstag", "zeit": "16.00 bis 21.30 Uhr" },
+      { "tag": "Sonntag", "zeit": "13.00 bis 20.00 Uhr" }
+    ]
+  },
+  "oeffnungszeiten": [
+    { "tag": "Montag", "zeit": "Ruhetag" },
+    { "tag": "Dienstag", "zeit": "ab 17:00 Uhr" },
+    { "tag": "Mittwoch", "zeit": "ab 17:00 Uhr" },
+    { "tag": "Donnerstag", "zeit": "ab 17:00 Uhr" },
+    { "tag": "Freitag", "zeit": "11:30 bis 15:00 und ab 17:00 Uhr" },
+    { "tag": "Samstag", "zeit": "ab 17:00 Uhr" },
+    { "tag": "Sonntag", "zeit": "ab 11:30 Uhr" },
+    { "tag": "Feiertage", "zeit": "ab 11:30 Uhr" }
+  ],
+  "oeffnungszeitenFooter": [
+    { "tag": "Montag", "zeit": "Ruhetag" },
+    { "tag": "Di bis Do", "zeit": "ab 17:00 Uhr" },
+    { "tag": "Freitag", "zeit": "ab 11:30 Uhr" },
+    { "tag": "Samstag", "zeit": "ab 17:00 Uhr" },
+    { "tag": "So und Feiertage", "zeit": "ab 11:30 Uhr" }
+  ],
+  "bewertung": {
+    "wert": "4,7",
+    "anzahl": "1540"
+  }
+}

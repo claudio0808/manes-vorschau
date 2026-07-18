@@ -1,0 +1,114 @@
+{
+  "raeume": {
+    "bierzimmer": {
+      "titel": "Bierzimmer",
+      "text": "Unser heller Raum mit Backsteinwand und großer Fensterfront. Drinnen sitzen und ins Grüne schauen: der gemütliche Rahmen für Menüs, Familienessen und Feiern in mittlerer Runde.",
+      "featured": "bierzimmer-04",
+      "bilder": [
+        "bierzimmer-01",
+        "bierzimmer-02",
+        "bierzimmer-03",
+        "bierzimmer-04",
+        "bierzimmer-05",
+        "bierzimmer-06",
+        "bierzimmer-07",
+        "bierzimmer-08"
+      ]
+    },
+    "saal": {
+      "titel": "Saal",
+      "text": "Unser großer Festsaal mit Bühne, Tanzfläche und Veranstaltungstechnik. Ob Hochzeit, rundes Jubiläum, Firmenfeier oder Karnevalsparty: hier ist Platz für große Gesellschaften, festlich eingedeckt oder als Party-Location.",
+      "featured": "saal-14",
+      "bilder": [
+        "saal-01",
+        "saal-02",
+        "saal-03",
+        "saal-04",
+        "saal-05",
+        "saal-06",
+        "saal-07",
+        "saal-08",
+        "saal-09",
+        "saal-10",
+        "saal-11",
+        "saal-12",
+        "saal-13",
+        "saal-14",
+        "saal-15",
+        "saal-16",
+        "saal-17",
+        "saal-18",
+        "saal-19",
+        "saal-20",
+        "saal-21",
+        "saal-22",
+        "saal-23",
+        "saal-24",
+        "saal-25",
+        "saal-26",
+        "saal-27",
+        "saal-28",
+        "saal-29",
+        "saal-30"
+      ]
+    },
+    "gastraum-oben": {
+      "titel": "Gastraum oben",
+      "text": "Der Gastraum im Obergeschoss mit warmem Holzboden und ruhiger Atmosphäre. Ein zurückgezogener Rahmen für Familienfeiern, Geburtstage und Runden im kleineren Kreis.",
+      "featured": "gastraum-oben-08",
+      "bilder": [
+        "gastraum-oben-01",
+        "gastraum-oben-02",
+        "gastraum-oben-03",
+        "gastraum-oben-04",
+        "gastraum-oben-05",
+        "gastraum-oben-06",
+        "gastraum-oben-07",
+        "gastraum-oben-08",
+        "gastraum-oben-09"
+      ]
+    },
+    "bierhuette": {
+      "titel": "Bierhütte",
+      "text": "Die überdachte Bierhütte im Freien mit klassischen Biergarnituren. Wettergeschützt feiern unter freiem Himmel, direkt am Haus: für zünftige Runden und Feste.",
+      "featured": "bierhuette-03",
+      "bilder": [
+        "bierhuette-01",
+        "bierhuette-02",
+        "bierhuette-03",
+        "bierhuette-04",
+        "bierhuette-05"
+      ]
+    }
+  },
+  "geschichte": [
+    {
+      "bild": "g-01",
+      "caption": "Historische Luftaufnahme des Anwesens"
+    },
+    {
+      "bild": "g-02",
+      "caption": "Der „Manes“ an der Straßenecke in Ückerath"
+    },
+    {
+      "bild": "g-03",
+      "caption": "Die Fassade an der Hauptstraße"
+    },
+    {
+      "bild": "g-04",
+      "caption": "An der Straßenecke in Ückerath, Stadt Dormagen"
+    },
+    {
+      "bild": "g-05",
+      "caption": "Die Terrasse vor dem Haus"
+    },
+    {
+      "bild": "g-06",
+      "caption": "Der Bösch aus der Luft, heute"
+    },
+    {
+      "bild": "g-07",
+      "caption": "Janina Felbor und Boris Orschel"
+    }
+  ]
+}
