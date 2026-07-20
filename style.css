@@ -88,7 +88,7 @@
   --shadow-md: 0 18px 44px rgba(25, 27, 30, 0.16);
   --shadow-lg: 0 30px 70px rgba(25, 27, 30, 0.28);
 
-  --header-h: 92px;
+  --header-h: 78px;
   --ticker-h: 40px;
 }
 
@@ -289,13 +289,23 @@ ul { list-style: none; padding: 0; }
   gap: clamp(1rem, 2.4vw, 2.4rem);
   max-width: var(--wrap);
   margin-inline: auto;
-  padding: 0.45rem var(--gutter);
+  padding: 0.85rem var(--gutter);
 }
-.wordmark { display: inline-flex; align-items: center; flex: none; }
-.wordmark-logo {
-  height: var(--logo-h, 60px);
-  width: auto;
-  transition: height 0.3s ease;
+.wordmark { display: flex; flex-direction: column; line-height: 1; flex: none; }
+.wordmark-name {
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 1.28rem;
+  letter-spacing: 0.02em;
+  color: var(--gold);
+}
+.wordmark-tag {
+  font-size: 0.68rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--light-on-dark);
+  margin-top: 0.35rem;
+  opacity: 0.9;
 }
 
 /* gruppierte Navigation mit Dropdowns, rechts ausgerichtet */
@@ -1297,7 +1307,7 @@ ul { list-style: none; padding: 0; }
   gap: 2.2rem;
   padding-block: clamp(3rem, 6vw, 4.5rem);
 }
-.footer-logo { width: 210px; max-width: 70%; height: auto; margin-bottom: 1.1rem; }
+.footer-logo { width: 150px; max-width: 60%; height: auto; margin-bottom: 1.1rem; }
 .footer-tag { max-width: 40ch; font-size: 0.96rem; }
 .footer-stars { margin-top: 1rem; display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem; }
 .footer-stars span[aria-hidden] { color: var(--gold); letter-spacing: 0.08em; }
@@ -1392,6 +1402,7 @@ ul { list-style: none; padding: 0; }
   border-bottom: 1px solid var(--line-gold);
 }
 .legal-header-bar .header-inner { min-height: 64px; }
+.legal-header-bar .wordmark-tag { color: var(--ink-soft); }
 
 /* ==========================================================================
    Scroll reveal
