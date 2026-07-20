@@ -1803,9 +1803,9 @@ ul { list-style: none; padding: 0; }
    ========================================================================== */
 .karten-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: clamp(1.8rem, 4vw, 2.8rem);
-  max-width: 780px;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.6rem, 4vw, 2.6rem);
+  max-width: 1020px;
   margin-inline: auto;
 }
 .pdf-karte {
@@ -1841,7 +1841,7 @@ ul { list-style: none; padding: 0; }
 .pdf-btn svg { flex: none; }
 
 /* Innen + Außen als zwei Vorschauen */
-.pdf-doppel { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; margin-top: 1.2rem; margin-bottom: 1.3rem; }
+.pdf-doppel { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 1.2rem; margin-bottom: 1.3rem; }
 .pdf-vorschau-fig { margin: 0; }
 .pdf-vorschau-fig figcaption {
   margin-top: 0.5rem;
