@@ -71,12 +71,16 @@
     toggle.setAttribute("aria-expanded", "false");
     toggle.setAttribute("aria-label", "Menü öffnen");
     mobileNav.hidden = true;
+    if (header) { header.classList.remove("nav-open"); }
+    document.body.style.overflow = "";
   }
   function openNav() {
     if (!toggle || !mobileNav) { return; }
     toggle.setAttribute("aria-expanded", "true");
     toggle.setAttribute("aria-label", "Menü schließen");
     mobileNav.hidden = false;
+    if (header) { header.classList.add("nav-open"); }
+    document.body.style.overflow = "hidden";
   }
   if (toggle && mobileNav) {
     toggle.addEventListener("click", function () {
