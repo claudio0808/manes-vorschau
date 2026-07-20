@@ -271,19 +271,17 @@ ul { list-style: none; padding: 0; }
 .nowrap { white-space: nowrap; }
 
 /* ==========================================================================
-   Header, einzeilig: Logo links, gruppierte Navigation (Dropdowns), CTA rechts.
-   Warmes Creme statt kaltem Grau.
+   Header, einzeilig: Logo links, gruppierte Navigation (Dropdowns) rechts.
+   Ganz oben transparent über dem Hero, beim Scrollen solide dunkel wie der Footer.
    ========================================================================== */
 .site-header {
   --logo-h: 76px;
   position: fixed;
   inset: var(--ticker-h) 0 auto 0;
   z-index: 100;
-  background: rgba(245, 241, 233, 0.93);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--line-gold);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease, top 0.3s ease;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, top 0.3s ease;
 }
 .header-inner {
   display: flex;
@@ -300,8 +298,8 @@ ul { list-style: none; padding: 0; }
   transition: height 0.3s ease;
 }
 
-/* gruppierte Navigation mit Dropdowns */
-.site-nav { flex: 1 1 auto; display: flex; justify-content: center; }
+/* gruppierte Navigation mit Dropdowns, rechts ausgerichtet */
+.site-nav { margin-left: auto; display: flex; }
 .site-nav .nav-list { display: flex; align-items: center; gap: clamp(0.15rem, 0.9vw, 1rem); }
 .nav-item { position: relative; }
 .nav-top {
@@ -312,7 +310,7 @@ ul { list-style: none; padding: 0; }
   font-weight: 700;
   font-size: 1rem;
   letter-spacing: 0.01em;
-  color: var(--ink);
+  color: var(--light-on-dark);
   background: none;
   border: 0;
   border-radius: var(--radius);
@@ -324,7 +322,7 @@ ul { list-style: none; padding: 0; }
 .nav-caret { width: 11px; height: 8px; opacity: 0.7; transition: transform 0.25s ease; }
 .nav-item:hover .nav-top,
 .nav-top:focus-visible,
-.nav-top[aria-expanded="true"] { color: var(--gold-ink); }
+.nav-top[aria-expanded="true"] { color: var(--gold-soft); }
 .nav-item:hover .nav-caret,
 .nav-top[aria-expanded="true"] .nav-caret { transform: rotate(180deg); }
 
@@ -335,10 +333,10 @@ ul { list-style: none; padding: 0; }
   transform: translateX(-50%) translateY(8px);
   min-width: 230px;
   padding: 0.5rem;
-  background: var(--surface);
+  background: var(--anthracite-deep);
   border: 1px solid var(--line-gold);
   border-top: 2px solid var(--gold);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.45);
   display: flex;
   flex-direction: column;
   opacity: 0;
@@ -365,20 +363,21 @@ ul { list-style: none; padding: 0; }
   padding: 0.62rem 0.95rem;
   font-size: 0.96rem;
   font-weight: 600;
-  color: var(--ink);
+  color: var(--light-on-dark);
   white-space: nowrap;
   border-radius: 3px;
   transition: background-color 0.15s ease, color 0.15s ease;
 }
-.nav-menu a:hover { background: rgba(170, 135, 63, 0.12); color: var(--gold-ink); }
+.nav-menu a:hover { background: rgba(255, 255, 255, 0.07); color: var(--gold-soft); }
 
 .header-cta-btn { flex: none; padding: 0.62rem 1.5rem; }
 
-/* scrolled: kompakter, kräftigeres Milchglas + Schatten */
+/* scrolled: solide dunkel wie der Footer + Schatten */
 .site-header.is-scrolled {
   --logo-h: 52px;
-  background: rgba(245, 241, 233, 0.98);
-  box-shadow: 0 6px 24px rgba(24, 26, 30, 0.14);
+  background: var(--anthracite-deep);
+  border-bottom-color: var(--line-gold);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
   top: 0;
 }
 
@@ -397,7 +396,7 @@ ul { list-style: none; padding: 0; }
   display: block;
   height: 2px;
   width: 100%;
-  background: var(--ink);
+  background: var(--light-on-dark);
   transition: transform 0.25s ease, opacity 0.2s ease, background-color 0.3s ease;
 }
 .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(1) { transform: translateY(9px) rotate(45deg); }
@@ -406,13 +405,13 @@ ul { list-style: none; padding: 0; }
 
 /* mobile nav: gruppiertes Akkordeon */
 .mobile-nav {
-  background: var(--surface);
+  background: var(--anthracite);
   border-top: 1px solid var(--line-gold);
   padding: 0.5rem var(--gutter) 1.75rem;
 }
 .mobile-nav[hidden] { display: none; }
 .mobile-nav-list { display: flex; flex-direction: column; margin-bottom: 1.1rem; }
-.m-group { border-bottom: 1px solid var(--line); }
+.m-group { border-bottom: 1px solid rgba(236, 237, 239, 0.14); }
 .m-top {
   width: 100%;
   display: flex;
@@ -425,7 +424,7 @@ ul { list-style: none; padding: 0; }
   font-family: var(--font-body);
   font-weight: 700;
   font-size: 1.12rem;
-  color: var(--ink);
+  color: var(--light-on-dark);
 }
 .m-top .nav-caret { width: 13px; height: 9px; }
 .m-top[aria-expanded="true"] .nav-caret { transform: rotate(180deg); }
@@ -433,11 +432,11 @@ ul { list-style: none; padding: 0; }
 .m-sub[hidden] { display: none; }
 .m-sub a {
   padding: 0.6rem 0.25rem;
-  color: var(--ink-soft);
+  color: rgba(236, 237, 239, 0.82);
   font-weight: 600;
   font-size: 1rem;
 }
-.m-sub a:hover { color: var(--gold-ink); }
+.m-sub a:hover { color: var(--gold-soft); }
 
 /* ==========================================================================
    Hero
