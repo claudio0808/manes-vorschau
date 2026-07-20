@@ -113,6 +113,9 @@
   }
   navTops.forEach(function (btn) {
     var menu = btn.parentNode.querySelector("[data-nav-menu]");
+    // Hover über eine Kategorie schließt zuvor per Klick geöffnete Menüs,
+    // damit nie zwei gleichzeitig offen sind (Hover selbst läuft über CSS).
+    btn.parentNode.addEventListener("mouseenter", function () { closeMenus(null); });
     btn.addEventListener("click", function () {
       var open = btn.getAttribute("aria-expanded") === "true";
       closeMenus(btn);
