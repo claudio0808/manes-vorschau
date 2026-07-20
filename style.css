@@ -1405,7 +1405,7 @@ ul { list-style: none; padding: 0; }
   color: var(--ink);
   font-size: 0.95rem;
 }
-.legal-back { margin-top: 2rem; }
+.legal-back { margin-top: 2rem; text-align: center; }
 
 .legal-header-bar {
   --logo-h: 48px;
