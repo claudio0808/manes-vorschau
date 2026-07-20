@@ -175,7 +175,13 @@ ul { list-style: none; padding: 0; }
 
 .wrap { width: 100%; max-width: var(--wrap); margin-inline: auto; padding-inline: var(--gutter); }
 
-.section { padding-block: var(--section-y); }
+.section {
+  padding-block: var(--section-y);
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .section-head { max-width: var(--wrap-narrow); margin-bottom: clamp(1.8rem, 3.5vw, 2.6rem); }
 
 /* keep anchored section titles clear of the fixed header */
@@ -927,6 +933,10 @@ ul { list-style: none; padding: 0; }
   background: var(--bg);
   color: var(--ink);
   padding-block: var(--section-y);
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .panel-steak-inner {
   display: grid;
