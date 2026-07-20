@@ -9,8 +9,8 @@
     "text": "In dieser Zeit sind Restaurant und Theke geschlossen. Bei schönem Wetter ist die Bierhütte und der Biergarten geöffnet, mit Getränken und einer kleinen Snackkarte. Reservierungen sind für diesen Zeitraum nicht möglich.",
     "zeiten": [
       { "tag": "Montag", "zeit": "geschlossen" },
-      { "tag": "Dienstag bis Samstag", "zeit": "16.00 bis 21.30 Uhr" },
-      { "tag": "Sonntag", "zeit": "13.00 bis 20.00 Uhr" }
+      { "tag": "Dienstag bis Samstag", "zeit": "16.00 bis 21.00 Uhr" },
+      { "tag": "Sonntag", "zeit": "13.00 bis 21.00 Uhr" }
     ]
   },
   "oeffnungszeiten": [
