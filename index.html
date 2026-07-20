@@ -31,7 +31,7 @@
 <link rel="preload" href="fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/source-sans-3-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" as="image" href="images/manes_slider2.jpg" fetchpriority="high">
-<link rel="stylesheet" href="style.css?v=99">
+<link rel="stylesheet" href="style.css?v=100">
 
 <script type="application/ld+json">
 {
@@ -267,12 +267,14 @@
   <section class="section section-speisekarte" id="speisekarte" aria-labelledby="speisekarte-titel">
     <div class="wrap">
       <header class="section-head reveal">
+        <p class="eyebrow">Speisekarte</p>
         <h2 id="speisekarte-titel" class="section-title">Unsere Speisekarten</h2>
-        <p class="section-intro">Unsere aktuellen Karten als PDF, immer auf dem neuesten Stand.</p>
+        <p class="section-intro">Unsere aktuellen Karten als PDF, immer auf dem neuesten Stand. Zum Ansehen oder Herunterladen. Die kleine Karte gilt für Gruppen ab 15 Personen.</p>
       </header>
 
       <div class="karten-grid reveal">
         <article class="pdf-karte">
+          <span class="pdf-karte-badge pdf-karte-badge-plain">Reguläre Karte</span>
           <h3 class="pdf-karte-titel">Reguläre Speisekarte</h3>
           <p class="pdf-karte-sub">Unsere große Karte</p>
           <div class="pdf-doppel">
@@ -281,37 +283,44 @@
                 <canvas class="pdf-vorschau-canvas" aria-hidden="true"></canvas>
                 <span class="pdf-vorschau-hint"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.8"/><path d="M15.5 15.5L20 20M11 8.5v5M8.5 11h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Vergrößern</span>
               </a>
+              <figcaption>Innenseite</figcaption>
             </figure>
             <figure class="pdf-vorschau-fig">
               <a class="pdf-vorschau" href="speisekarten/speisekarte-aussen.pdf" target="_blank" rel="noopener" data-pdf="speisekarten/speisekarte-aussen.pdf" aria-label="Außenseite der regulären Speisekarte vergrößern">
                 <canvas class="pdf-vorschau-canvas" aria-hidden="true"></canvas>
                 <span class="pdf-vorschau-hint"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.8"/><path d="M15.5 15.5L20 20M11 8.5v5M8.5 11h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Vergrößern</span>
               </a>
+              <figcaption>Außenseite</figcaption>
             </figure>
           </div>
           <a class="btn btn-primary pdf-download" href="speisekarten/speisekarte-innen.pdf" download data-download="speisekarten/speisekarte-innen.pdf,speisekarten/speisekarte-aussen.pdf">Speisekarte herunterladen</a>
         </article>
 
         <article class="pdf-karte">
+          <span class="pdf-karte-badge">ab 15 Personen</span>
           <h3 class="pdf-karte-titel">Kleine Speisekarte</h3>
-          <p class="pdf-karte-sub">Für Gruppen und Gesellschaften ab 15 Personen</p>
+          <p class="pdf-karte-sub">Für Gruppen und Gesellschaften</p>
           <div class="pdf-doppel">
             <figure class="pdf-vorschau-fig">
               <a class="pdf-vorschau" href="speisekarten/kleinekarte-innen.pdf" target="_blank" rel="noopener" data-pdf="speisekarten/kleinekarte-innen.pdf" aria-label="Innenseite der kleinen Speisekarte vergrößern">
                 <canvas class="pdf-vorschau-canvas" aria-hidden="true"></canvas>
                 <span class="pdf-vorschau-hint"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.8"/><path d="M15.5 15.5L20 20M11 8.5v5M8.5 11h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Vergrößern</span>
               </a>
+              <figcaption>Innenseite</figcaption>
             </figure>
             <figure class="pdf-vorschau-fig">
               <a class="pdf-vorschau" href="speisekarten/kleinekarte-aussen.pdf" target="_blank" rel="noopener" data-pdf="speisekarten/kleinekarte-aussen.pdf" aria-label="Außenseite der kleinen Speisekarte vergrößern">
                 <canvas class="pdf-vorschau-canvas" aria-hidden="true"></canvas>
                 <span class="pdf-vorschau-hint"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.8"/><path d="M15.5 15.5L20 20M11 8.5v5M8.5 11h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Vergrößern</span>
               </a>
+              <figcaption>Außenseite</figcaption>
             </figure>
           </div>
           <a class="btn btn-primary pdf-download" href="speisekarten/kleinekarte-innen.pdf" download data-download="speisekarten/kleinekarte-innen.pdf,speisekarten/kleinekarte-aussen.pdf">Kleine Karte herunterladen</a>
         </article>
       </div>
+
+      <p class="menukarte-schluss">Änderungen vorbehalten, es gilt die aktuelle Karte im Haus.</p>
     </div>
   </section>
 
