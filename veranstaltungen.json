@@ -16,7 +16,7 @@
         { "label": "Alter", "wert": "ab 18 Jahre" },
         { "label": "Bändchenverkauf", "wert": "ab 28.07.2026" }
       ],
-      "featured": true,
+      "featured": false,
       "aktiv": true
     },
     {
@@ -36,7 +36,7 @@
         { "label": "Anmeldung", "wert": "mail@manes.de" }
       ],
       "vorbei": true,
-      "featured": true,
+      "featured": false,
       "aktiv": true
     },
     {
@@ -55,7 +55,7 @@
         { "label": "Ort", "wert": "Bierhütte im Biergarten" }
       ],
       "vorbei": true,
-      "featured": true,
+      "featured": false,
       "aktiv": true
     }
   ]

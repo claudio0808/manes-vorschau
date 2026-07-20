@@ -1706,6 +1706,32 @@ ul { list-style: none; padding: 0; }
 .vk:hover .vk-mehr { color: var(--gold); }
 .vk:hover .vk-mehr svg { transform: translateX(4px); }
 .vk-leer { grid-column: 1 / -1; text-align: center; color: var(--ink-soft); font-style: italic; padding: 2rem 0; }
+/* Platzhalter, wenn aktuell keine kommende Veranstaltung angekuendigt ist */
+.vk-platzhalter {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: clamp(2rem, 5vw, 3.5rem) 1.5rem;
+  background: var(--surface);
+  border: 1.5px dashed var(--line-gold);
+  border-radius: var(--radius-lg);
+}
+.vk-platzhalter-eyebrow {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.76rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-ink);
+}
+.vk-platzhalter-titel {
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: clamp(1.5rem, 1rem + 2vw, 2.1rem);
+  letter-spacing: 0.02em;
+  color: var(--anthracite);
+  margin-top: 0.5rem;
+}
+.vk-platzhalter-text { color: var(--ink-soft); margin-top: 0.6rem; }
 
 .aktuelles-cta { text-align: center; margin-top: clamp(1.6rem, 3vw, 2.4rem); }
 
@@ -2141,6 +2167,25 @@ ul { list-style: none; padding: 0; }
   box-shadow: var(--shadow-md);
 }
 .fh-media:hover { transform: rotate(0deg) translateY(-3px); }
+/* Platzhalter fuer den Ferien-Aushang, bis der neue Banner geliefert wird */
+.fh-aushang-platzhalter {
+  width: clamp(160px, 16vw, 210px);
+  margin-right: clamp(1rem, 5vw, 4.5rem);
+  aspect-ratio: 709 / 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  background: rgba(170, 135, 63, 0.06);
+  border: 1.5px dashed var(--line-gold);
+  border-radius: var(--radius);
+  color: var(--gold-ink);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.35;
+}
 .fh-media-label {
   display: block;
   margin-top: 0.5rem;
@@ -2159,11 +2204,12 @@ ul { list-style: none; padding: 0; }
   color: var(--gold-ink);
 }
 .fh-titel {
-  font-family: var(--font-display);
+  font-family: var(--font-title);
   font-weight: 700;
-  font-size: clamp(1.3rem, 1rem + 1.4vw, 1.9rem);
+  font-size: clamp(1.25rem, 1rem + 1.3vw, 1.75rem);
+  letter-spacing: 0.02em;
   color: var(--anthracite);
-  margin-top: 0.3rem;
+  margin-top: 0.35rem;
 }
 .fh-text { margin-top: 0.7rem; color: var(--ink); max-width: 64ch; }
 .fh-text strong { color: var(--anthracite); font-weight: 700; }
@@ -2182,7 +2228,7 @@ ul { list-style: none; padding: 0; }
 .fh-zeiten li span:last-child { font-weight: 700; color: var(--anthracite); white-space: nowrap; }
 @media (max-width: 700px) {
   .ferien-hinweis { grid-template-columns: 1fr; }
-  .fh-media { justify-self: center; }
+  .fh-media, .fh-aushang-platzhalter { justify-self: center; }
 }
 
 /* Vergangene Veranstaltung */
@@ -2438,7 +2484,7 @@ a.news-bar:hover .news-text { color: #fff; }
   .timeline-body p { max-width: none; }
 
   /* Ferien-Karte: Aushang kleiner */
-  .fh-media { width: 120px; margin-right: 0; }
+  .fh-media, .fh-aushang-platzhalter { width: 120px; margin-right: 0; }
 }
 
 @media (max-width: 560px) {

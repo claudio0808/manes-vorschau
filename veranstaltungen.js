@@ -96,8 +96,17 @@
   load().then(function (data) {
     var list = actives(data);
     if (featEl) {
-      var feat = list.filter(function (v) { return v.featured; });
-      renderGrid(featEl, (feat.length ? feat : list).slice(0, 3), "Aktuell sind keine Veranstaltungen angekündigt.");
+      var feat = list.filter(function (v) { return v.featured && !v.vorbei; });
+      if (feat.length) {
+        renderGrid(featEl, feat.slice(0, 3), "");
+      } else {
+        featEl.innerHTML = '<div class="vk-platzhalter reveal">'
+          + '<span class="vk-platzhalter-eyebrow">Veranstaltungen</span>'
+          + '<p class="vk-platzhalter-titel">Mehr in Kürze</p>'
+          + '<p class="vk-platzhalter-text">Neue Termine und Aktionen kündigen wir hier in Kürze an.</p>'
+          + '</div>';
+        revealInjected(featEl);
+      }
     }
     if (listeEl) { renderGrid(listeEl, list, "Aktuell sind keine Veranstaltungen angekündigt."); }
     if (detailEl) { renderDetail(detailEl, data, paramId()); }
