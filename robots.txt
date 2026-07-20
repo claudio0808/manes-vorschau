@@ -1,2 +1,4 @@
-﻿User-agent: *
-Disallow: /
+User-agent: *
+Allow: /
+
+Sitemap: https://www.manes.de/sitemap.xml

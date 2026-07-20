@@ -88,7 +88,7 @@
   --shadow-md: 0 18px 44px rgba(25, 27, 30, 0.16);
   --shadow-lg: 0 30px 70px rgba(25, 27, 30, 0.28);
 
-  --header-h: 78px;
+  --header-h: 138px;
   --ticker-h: 40px;
 }
 
@@ -236,7 +236,7 @@ ul { list-style: none; padding: 0; }
   pointer-events: none;
   transition: border-color 0.18s ease;
 }
-.btn-label { display: block; }
+.btn-label { display: block; width: 100%; }
 .btn-sub { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.06em; opacity: 0.85; }
 
 .btn-primary {
@@ -268,53 +268,73 @@ ul { list-style: none; padding: 0; }
 
 .btn-lg { padding: 1rem 2rem; font-size: 1.05rem; }
 .btn-block { display: flex; width: 100%; }
+.nowrap { white-space: nowrap; }
 
 /* ==========================================================================
-   Header
+   Header, zweizeilig: helle Marken-Zeile (Logo, Bewertung, CTA)
+   und eigene Navigations-Zeile darunter
    ========================================================================== */
 .site-header {
+  --logo-h: 82px;
   position: fixed;
   inset: var(--ticker-h) 0 auto 0;
   z-index: 100;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, top 0.3s ease;
-  border-bottom: 1px solid transparent;
+  background: rgba(244, 245, 246, 0.86);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line-gold);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, top 0.3s ease;
 }
 .header-inner {
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  min-height: var(--header-h);
   max-width: var(--wrap);
   margin-inline: auto;
-  padding-inline: var(--gutter);
+  padding: 0.55rem var(--gutter);
 }
 
-.wordmark { display: flex; flex-direction: column; line-height: 1; margin-right: auto; }
-.wordmark-name {
-  font-family: var(--font-title);
-  font-weight: 700;
-  font-size: 1.28rem; /* Cinzel-Kapitalis laeuft breiter, Platz fuer die Navigation lassen */
-  letter-spacing: 0.02em;
-  color: var(--gold);
-  transition: color 0.3s ease;
-}
-.wordmark-tag {
-  font-size: 0.68rem;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  color: var(--light-on-dark);
-  margin-top: 0.35rem;
-  transition: color 0.3s ease;
-  opacity: 0.9;
+.wordmark { display: inline-flex; align-items: center; margin-right: auto; }
+.wordmark-logo {
+  height: var(--logo-h, 60px);
+  width: auto;
+  transition: height 0.3s ease;
 }
 
-.site-nav .nav-list { display: flex; gap: 0.9rem; align-items: center; }
+/* rechte Gruppe der Marken-Zeile: Bewertung + Reservieren */
+.header-aside { display: flex; align-items: center; gap: 1.3rem; }
+.header-rating {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-end;
+  line-height: 1.15;
+  text-decoration: none;
+}
+.header-rating-stars { color: var(--gold); font-size: 0.98rem; letter-spacing: 0.06em; }
+.header-rating-text { font-size: 0.8rem; color: var(--ink-soft); }
+.header-rating-text strong { color: var(--ink); font-weight: 700; }
+.header-rating:hover .header-rating-stars { color: var(--gold-light); }
+.header-cta-btn { padding: 0.62rem 1.5rem; }
+
+/* Navigations-Zeile (zweite Reihe) */
+.site-nav { border-top: 1px solid var(--line); }
+.site-nav .nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(0.9rem, 1.7vw, 2rem);
+  align-items: center;
+  justify-content: center;
+  max-width: var(--wrap);
+  margin-inline: auto;
+  padding: 0.5rem var(--gutter);
+}
 .site-nav a {
   font-weight: 600;
-  font-size: 0.88rem;
-  color: var(--light-on-dark);
-  padding: 0.4rem 0;
+  font-size: 0.9rem;
+  color: var(--ink);
+  padding: 0.3rem 0;
   position: relative;
+  white-space: nowrap;
   transition: color 0.2s ease;
 }
 .site-nav a::after {
@@ -327,15 +347,14 @@ ul { list-style: none; padding: 0; }
   transform-origin: left;
   transition: transform 0.22s ease;
 }
-.site-nav a:hover { color: #fff; }
+.site-nav a:hover { color: var(--gold-ink); }
 .site-nav a:hover::after { transform: scaleX(1); }
 
-.header-cta { min-width: max-content; }
-
-/* scrolled state: solid cream header */
+/* scrolled: kompakter, kräftigeres Milchglas + Schatten */
 .site-header.is-scrolled {
-  background: var(--anthracite-deep);
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+  --logo-h: 54px;
+  background: rgba(244, 245, 246, 0.97);
+  box-shadow: 0 6px 24px rgba(24, 26, 30, 0.14);
   top: 0;
 }
 
@@ -353,7 +372,7 @@ ul { list-style: none; padding: 0; }
   display: block;
   height: 2px;
   width: 100%;
-  background: var(--light-on-dark);
+  background: var(--ink);
   transition: transform 0.25s ease, opacity 0.2s ease, background-color 0.3s ease;
 }
 .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(1) { transform: translateY(9px) rotate(45deg); }
@@ -361,7 +380,7 @@ ul { list-style: none; padding: 0; }
 .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
 
 .mobile-nav {
-  background: var(--anthracite);
+  background: var(--surface);
   border-top: 1px solid var(--line-gold);
   padding: 1.25rem var(--gutter) 2rem;
 }
@@ -370,12 +389,12 @@ ul { list-style: none; padding: 0; }
 .mobile-nav-list a {
   display: block;
   padding: 0.85rem 0.25rem;
-  color: var(--light-on-dark);
+  color: var(--ink);
   font-weight: 600;
   font-size: 1.1rem;
-  border-bottom: 1px solid rgba(236, 237, 239, 0.14);
+  border-bottom: 1px solid var(--line);
 }
-.mobile-nav-list a:hover { color: var(--gold-soft); }
+.mobile-nav-list a:hover { color: var(--gold-ink); }
 
 /* ==========================================================================
    Hero
@@ -414,34 +433,12 @@ ul { list-style: none; padding: 0; }
   width: min(420px, 74vw);
   margin: 0 auto clamp(1.5rem, 4vw, 2.5rem);
   position: relative;
-  padding-top: 46px;
-  transform-origin: top center;
-  animation: sign-sway 6.5s ease-in-out infinite;
-  will-change: transform;
 }
-.hero-chain {
-  position: absolute;
-  top: 0;
-  width: 3px;
-  height: 52px;
-  background:
-    repeating-linear-gradient(180deg,
-      var(--gold-light) 0 4px,
-      rgba(90, 62, 22, 0.9) 4px 8px);
-  border-radius: 2px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
-}
-.hero-chain-left { left: 20%; transform: rotate(9deg); transform-origin: top; }
-.hero-chain-right { right: 20%; transform: rotate(-9deg); transform-origin: top; }
 .hero-sign-img {
   width: 100%;
   border-radius: 6px;
   border: 2px solid rgba(170, 135, 63, 0.55);
   box-shadow: 0 22px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0,0,0,0.3);
-}
-@keyframes sign-sway {
-  0%, 100% { transform: rotate(-1.6deg); }
-  50%      { transform: rotate(1.6deg); }
 }
 
 .hero-eyebrow {
@@ -1345,6 +1342,7 @@ ul { list-style: none; padding: 0; }
 .legal-back { margin-top: 2rem; }
 
 .legal-header-bar {
+  --logo-h: 48px;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -1352,8 +1350,6 @@ ul { list-style: none; padding: 0; }
   border-bottom: 1px solid var(--line-gold);
 }
 .legal-header-bar .header-inner { min-height: 64px; }
-.legal-header-bar .wordmark-name { color: var(--gold); }
-.legal-header-bar .wordmark-tag { color: var(--ink-soft); }
 
 /* ==========================================================================
    Scroll reveal
@@ -1377,8 +1373,10 @@ ul { list-style: none; padding: 0; }
 }
 .mobile-fab svg { width: 20px; height: 20px; fill: currentColor; }
 @media (max-width: 1240px) {
+  :root { --header-h: 64px; }
+  .site-header, .site-header.is-scrolled { --logo-h: 46px; }
   .site-nav { display: none; }
-  .header-cta { display: none; }
+  .header-aside { display: none; }
   .nav-toggle { display: flex; }
 }
 @media (max-width: 1024px) {

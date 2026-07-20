@@ -31,7 +31,7 @@
 <link rel="preload" href="fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/source-sans-3-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" as="image" href="images/manes_slider2.jpg" fetchpriority="high">
-<link rel="stylesheet" href="style.css?v=81">
+<link rel="stylesheet" href="style.css?v=83">
 
 <script type="application/ld+json">
 {
@@ -96,23 +96,17 @@
 <header class="site-header" id="seitenkopf" data-header>
   <div class="header-inner">
     <a class="wordmark" href="#seitenkopf" aria-label="Manes am Bösch, Startseite">
-      <span class="wordmark-name">Manes am Bösch</span>
-      <span class="wordmark-tag">Gaststätte seit 1860</span>
+      <img class="wordmark-logo" src="images/logo-manes.png?v=1" alt="Manes am Bösch, Dormagen-Ückerath, Gastronomie und Events" width="900" height="1070" fetchpriority="high">
+      <span class="sr-only">Manes am Bösch, Gaststätte seit 1860</span>
     </a>
 
-    <nav class="site-nav" id="hauptnavigation" aria-label="Hauptnavigation">
-      <ul class="nav-list">
-        <li><a href="#aktuelles">Aktuelles</a></li>
-        <li><a href="#speisekarte">Speisekarte</a></li>
-        <li><a href="#steak-freitag">Steak-Freitag</a></li>
-        <li><a href="#raeumlichkeiten">Räumlichkeiten</a></li>
-        <li><a href="#geschichte">Geschichte</a></li>
-        <li><a href="#stimmen">Bewertungen</a></li>
-        <li><a href="#anfahrt">Anfahrt</a></li>
-        <li><a href="#oeffnungszeiten">Öffnungszeiten</a></li>
-        <li><a href="#newsletter">Newsletter</a></li>
-      </ul>
-    </nav>
+    <div class="header-aside">
+      <a class="header-rating" href="https://www.google.com/maps/search/?api=1&amp;query=Manes+am+B%C3%B6sch+Dormagen" target="_blank" rel="noopener" aria-label="4,7 von 5 Sternen aus 1.540 Google-Bewertungen">
+        <span class="header-rating-stars" aria-hidden="true">★★★★★</span>
+        <span class="header-rating-text"><strong data-rating-wert>4,7</strong> &middot; <span data-rating-anzahl>1.540</span> Bewertungen</span>
+      </a>
+      <a class="btn btn-primary header-cta-btn" href="reservierung-restaurant.html">Reservieren</a>
+    </div>
 
     <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="mobilnavigation" aria-label="Menü öffnen">
       <span class="nav-toggle-bar"></span>
@@ -120,6 +114,20 @@
       <span class="nav-toggle-bar"></span>
     </button>
   </div>
+
+  <nav class="site-nav" id="hauptnavigation" aria-label="Hauptnavigation">
+    <ul class="nav-list">
+      <li><a href="#aktuelles">Aktuelles</a></li>
+      <li><a href="#speisekarte">Speisekarte</a></li>
+      <li><a href="#steak-freitag">Steak-Freitag</a></li>
+      <li><a href="#raeumlichkeiten">Räumlichkeiten</a></li>
+      <li><a href="#geschichte">Geschichte</a></li>
+      <li><a href="#stimmen">Bewertungen</a></li>
+      <li><a href="#anfahrt">Anfahrt</a></li>
+      <li><a href="#oeffnungszeiten">Öffnungszeiten</a></li>
+      <li><a href="#newsletter">Newsletter</a></li>
+    </ul>
+  </nav>
 
   <div class="mobile-nav" id="mobilnavigation" data-mobile-nav hidden>
     <ul class="mobile-nav-list">
@@ -151,14 +159,12 @@
       <h1 id="hero-titel" class="sr-only">Manes am Bösch, gutbürgerliche Gaststätte in Dormagen seit 1860</h1>
 
       <div class="hero-sign hero-sign-lg" data-sign>
-        <span class="hero-chain hero-chain-left"></span>
-        <span class="hero-chain hero-chain-right"></span>
         <img class="hero-sign-img" src="images/manes_slider1.jpg" alt="Beleuchtetes Messingschild mit dem Schriftzug Manes am Bösch an einer Backsteinwand" width="946" height="456" decoding="async">
       </div>
 
       <div class="hero-actions hero-actions-stack">
-        <a class="btn btn-primary btn-lg" href="reservierung-restaurant.html">Reservierungsanfrage Restaurant</a>
-        <a class="btn btn-primary btn-lg" href="reservierung-saal.html">Reservierungsanfrage Saal / Gesellschaften</a>
+        <a class="btn btn-primary btn-lg" href="reservierung-restaurant.html"><span class="btn-label">Reservierungsanfrage <span class="nowrap">Restaurant</span></span></a>
+        <a class="btn btn-primary btn-lg" href="reservierung-saal.html"><span class="btn-label">Reservierungsanfrage <span class="nowrap">Saal / Gesellschaften</span></span></a>
       </div>
 
       <a class="hero-rating" data-trust href="https://www.google.com/maps/search/?api=1&amp;query=Manes+am+B%C3%B6sch+Dormagen" target="_blank" rel="noopener" aria-label="Alle Google-Bewertungen ansehen: 4,7 von 5 Sternen aus 1.540 Bewertungen">
@@ -360,7 +366,7 @@
 
       <div class="feiern-cta reveal">
         <div class="feiern-cta-actions">
-          <a class="btn btn-primary" href="reservierung-saal.html">Reservierungsanfrage Saal / Gesellschaften</a>
+          <a class="btn btn-primary" href="reservierung-saal.html"><span class="btn-label">Reservierungsanfrage <span class="nowrap">Saal / Gesellschaften</span></span></a>
         </div>
       </div>
     </div>
@@ -585,8 +591,8 @@
         <h2 id="reservierung-titel" class="section-title">Reservieren Sie<br>am besten vorab</h2>
         <p class="reservierung-lead">Ihre Reservierungsanfrage läuft bequem über unser Formular. Wählen Sie den passenden Bereich, wir melden uns zur Bestätigung. Gerade zu Stoßzeiten sind wir telefonisch nicht immer erreichbar, über das Formular sind Sie auf der sicheren Seite.</p>
         <div class="reservierung-actions">
-          <a class="btn btn-primary btn-lg" href="reservierung-restaurant.html">Reservierungsanfrage Restaurant</a>
-          <a class="btn btn-primary btn-lg" href="reservierung-saal.html">Reservierungsanfrage Saal / Gesellschaften</a>
+          <a class="btn btn-primary btn-lg" href="reservierung-restaurant.html"><span class="btn-label">Reservierungsanfrage <span class="nowrap">Restaurant</span></span></a>
+          <a class="btn btn-primary btn-lg" href="reservierung-saal.html"><span class="btn-label">Reservierungsanfrage <span class="nowrap">Saal / Gesellschaften</span></span></a>
         </div>
         <p class="reservierung-note">Reservierungen sind ausschließlich für den Innenbereich und ausschließlich über das Formular möglich. Für den Außenbereich (Biergarten) nehmen wir keine Reservierungen an.</p>
       </div>
