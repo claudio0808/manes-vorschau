@@ -104,16 +104,19 @@
   var detailEl = document.querySelector('[data-veranstaltung="detail"]');
   if (!featEl && !listeEl && !detailEl) { return; }
 
+  /* Karten rendern und die Reihe mit Platzhaltern auf minCount auffüllen */
+  function renderCards(container, events, minCount) {
+    var cards = events.map(cardHTML);
+    while (cards.length < minCount) { cards.push(placeholderCardHTML()); }
+    container.innerHTML = cards.join("");
+    revealInjected(container);
+  }
+
   load().then(function (data) {
-    var list = actives(data);
-    if (featEl) {
-      var feat = list.filter(function (v) { return v.featured && !v.vorbei; });
-      var cards = feat.slice(0, 3).map(cardHTML);
-      while (cards.length < 3) { cards.push(placeholderCardHTML()); }
-      featEl.innerHTML = cards.join("");
-      revealInjected(featEl);
-    }
-    if (listeEl) { renderGrid(listeEl, list, "Aktuell sind keine Veranstaltungen angekündigt."); }
+    // gelaufene Veranstaltungen werden nirgends mehr gezeigt (Landing wie Übersicht)
+    var upcoming = actives(data).filter(function (v) { return !v.vorbei; });
+    if (featEl) { renderCards(featEl, upcoming.filter(function (v) { return v.featured; }).slice(0, 3), 3); }
+    if (listeEl) { renderCards(listeEl, upcoming, 3); }
     if (detailEl) { renderDetail(detailEl, data, paramId()); }
   }).catch(function () {
     var msg = '<p class="vk-leer">Die Veranstaltungen konnten nicht geladen werden. Bitte versuchen Sie es später erneut.</p>';
