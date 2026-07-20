@@ -97,6 +97,47 @@
     });
   }
 
+  /* ---------------- header dropdowns (Klick/Touch + Tastatur; Hover per CSS) ---------------- */
+  var navTops = Array.prototype.slice.call(document.querySelectorAll("[data-nav-top]"));
+  function closeMenus(except) {
+    navTops.forEach(function (b) {
+      if (b === except) { return; }
+      b.setAttribute("aria-expanded", "false");
+      var m = b.parentNode.querySelector("[data-nav-menu]");
+      if (m) { m.classList.remove("is-open"); }
+    });
+  }
+  navTops.forEach(function (btn) {
+    var menu = btn.parentNode.querySelector("[data-nav-menu]");
+    btn.addEventListener("click", function () {
+      var open = btn.getAttribute("aria-expanded") === "true";
+      closeMenus(btn);
+      btn.setAttribute("aria-expanded", open ? "false" : "true");
+      if (menu) { menu.classList.toggle("is-open", !open); }
+    });
+    if (menu) {
+      menu.addEventListener("click", function (e) { if (e.target.closest("a")) { closeMenus(null); } });
+    }
+  });
+  if (navTops.length) {
+    document.addEventListener("click", function (e) {
+      if (!e.target.closest(".nav-item")) { closeMenus(null); }
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") { closeMenus(null); }
+    });
+  }
+
+  /* ---------------- mobile: gruppiertes Akkordeon ---------------- */
+  Array.prototype.forEach.call(document.querySelectorAll("[data-m-top]"), function (btn) {
+    var sub = btn.parentNode.querySelector("[data-m-sub]");
+    btn.addEventListener("click", function () {
+      var open = btn.getAttribute("aria-expanded") === "true";
+      btn.setAttribute("aria-expanded", open ? "false" : "true");
+      if (sub) { sub.hidden = open; }
+    });
+  });
+
   /* ---------------- scroll reveals ---------------- */
   var revealEls = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
   if (reduceMotion || !("IntersectionObserver" in window)) {

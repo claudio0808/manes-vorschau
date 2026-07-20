@@ -88,7 +88,7 @@
   --shadow-md: 0 18px 44px rgba(25, 27, 30, 0.16);
   --shadow-lg: 0 30px 70px rgba(25, 27, 30, 0.28);
 
-  --header-h: 138px;
+  --header-h: 92px;
   --ticker-h: 40px;
 }
 
@@ -271,15 +271,15 @@ ul { list-style: none; padding: 0; }
 .nowrap { white-space: nowrap; }
 
 /* ==========================================================================
-   Header, zweizeilig: helle Marken-Zeile (Logo, Bewertung, CTA)
-   und eigene Navigations-Zeile darunter
+   Header, einzeilig: Logo links, gruppierte Navigation (Dropdowns), CTA rechts.
+   Warmes Creme statt kaltem Grau.
    ========================================================================== */
 .site-header {
-  --logo-h: 82px;
+  --logo-h: 76px;
   position: fixed;
   inset: var(--ticker-h) 0 auto 0;
   z-index: 100;
-  background: rgba(244, 245, 246, 0.86);
+  background: rgba(245, 241, 233, 0.93);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line-gold);
@@ -288,72 +288,96 @@ ul { list-style: none; padding: 0; }
 .header-inner {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: clamp(1rem, 2.4vw, 2.4rem);
   max-width: var(--wrap);
   margin-inline: auto;
-  padding: 0.55rem var(--gutter);
+  padding: 0.45rem var(--gutter);
 }
-
-.wordmark { display: inline-flex; align-items: center; margin-right: auto; }
+.wordmark { display: inline-flex; align-items: center; flex: none; }
 .wordmark-logo {
   height: var(--logo-h, 60px);
   width: auto;
   transition: height 0.3s ease;
 }
 
-/* rechte Gruppe der Marken-Zeile: Bewertung + Reservieren */
-.header-aside { display: flex; align-items: center; gap: 1.3rem; }
-.header-rating {
+/* gruppierte Navigation mit Dropdowns */
+.site-nav { flex: 1 1 auto; display: flex; justify-content: center; }
+.site-nav .nav-list { display: flex; align-items: center; gap: clamp(0.15rem, 0.9vw, 1rem); }
+.nav-item { position: relative; }
+.nav-top {
   display: inline-flex;
-  flex-direction: column;
-  align-items: flex-end;
-  line-height: 1.15;
-  text-decoration: none;
-}
-.header-rating-stars { color: var(--gold); font-size: 0.98rem; letter-spacing: 0.06em; }
-.header-rating-text { font-size: 0.8rem; color: var(--ink-soft); }
-.header-rating-text strong { color: var(--ink); font-weight: 700; }
-.header-rating:hover .header-rating-stars { color: var(--gold-light); }
-.header-cta-btn { padding: 0.62rem 1.5rem; }
-
-/* Navigations-Zeile (zweite Reihe) */
-.site-nav { border-top: 1px solid var(--line); }
-.site-nav .nav-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: clamp(0.9rem, 1.7vw, 2rem);
   align-items: center;
-  justify-content: center;
-  max-width: var(--wrap);
-  margin-inline: auto;
-  padding: 0.5rem var(--gutter);
-}
-.site-nav a {
-  font-weight: 600;
-  font-size: 0.9rem;
+  gap: 0.4rem;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
   color: var(--ink);
-  padding: 0.3rem 0;
-  position: relative;
+  background: none;
+  border: 0;
+  border-radius: var(--radius);
+  cursor: pointer;
+  padding: 0.6rem 0.85rem;
   white-space: nowrap;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, background-color 0.2s ease;
 }
-.site-nav a::after {
+.nav-caret { width: 11px; height: 8px; opacity: 0.7; transition: transform 0.25s ease; }
+.nav-item:hover .nav-top,
+.nav-top:focus-visible,
+.nav-top[aria-expanded="true"] { color: var(--gold-ink); }
+.nav-item:hover .nav-caret,
+.nav-top[aria-expanded="true"] .nav-caret { transform: rotate(180deg); }
+
+.nav-menu {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  min-width: 230px;
+  padding: 0.5rem;
+  background: var(--surface);
+  border: 1px solid var(--line-gold);
+  border-top: 2px solid var(--gold);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  z-index: 20;
+}
+/* unsichtbare Brücke, damit der Hover zwischen Button und Menü nicht abreißt */
+.nav-menu::before {
   content: "";
   position: absolute;
-  left: 0; bottom: -2px;
-  width: 100%; height: 2px;
-  background: var(--gold);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.22s ease;
+  left: 0; right: 0; top: -0.6rem;
+  height: 0.6rem;
 }
-.site-nav a:hover { color: var(--gold-ink); }
-.site-nav a:hover::after { transform: scaleX(1); }
+.nav-item:hover .nav-menu,
+.nav-item:focus-within .nav-menu,
+.nav-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+.nav-menu a {
+  display: block;
+  padding: 0.62rem 0.95rem;
+  font-size: 0.96rem;
+  font-weight: 600;
+  color: var(--ink);
+  white-space: nowrap;
+  border-radius: 3px;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+.nav-menu a:hover { background: rgba(170, 135, 63, 0.12); color: var(--gold-ink); }
+
+.header-cta-btn { flex: none; padding: 0.62rem 1.5rem; }
 
 /* scrolled: kompakter, kräftigeres Milchglas + Schatten */
 .site-header.is-scrolled {
-  --logo-h: 54px;
-  background: rgba(244, 245, 246, 0.97);
+  --logo-h: 52px;
+  background: rgba(245, 241, 233, 0.98);
   box-shadow: 0 6px 24px rgba(24, 26, 30, 0.14);
   top: 0;
 }
@@ -361,6 +385,7 @@ ul { list-style: none; padding: 0; }
 /* mobile nav toggle */
 .nav-toggle {
   display: none;
+  flex: none;
   width: 46px; height: 42px;
   border: 1.5px solid var(--gold);
   border-radius: var(--radius);
@@ -379,22 +404,40 @@ ul { list-style: none; padding: 0; }
 .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(2) { opacity: 0; }
 .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
 
+/* mobile nav: gruppiertes Akkordeon */
 .mobile-nav {
   background: var(--surface);
   border-top: 1px solid var(--line-gold);
-  padding: 1.25rem var(--gutter) 2rem;
+  padding: 0.5rem var(--gutter) 1.75rem;
 }
 .mobile-nav[hidden] { display: none; }
-.mobile-nav-list { display: flex; flex-direction: column; gap: 0.2rem; margin-bottom: 1.25rem; }
-.mobile-nav-list a {
-  display: block;
-  padding: 0.85rem 0.25rem;
+.mobile-nav-list { display: flex; flex-direction: column; margin-bottom: 1.1rem; }
+.m-group { border-bottom: 1px solid var(--line); }
+.m-top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  padding: 0.95rem 0.25rem;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1.12rem;
   color: var(--ink);
-  font-weight: 600;
-  font-size: 1.1rem;
-  border-bottom: 1px solid var(--line);
 }
-.mobile-nav-list a:hover { color: var(--gold-ink); }
+.m-top .nav-caret { width: 13px; height: 9px; }
+.m-top[aria-expanded="true"] .nav-caret { transform: rotate(180deg); }
+.m-sub { display: flex; flex-direction: column; padding: 0 0 0.7rem 0.6rem; }
+.m-sub[hidden] { display: none; }
+.m-sub a {
+  padding: 0.6rem 0.25rem;
+  color: var(--ink-soft);
+  font-weight: 600;
+  font-size: 1rem;
+}
+.m-sub a:hover { color: var(--gold-ink); }
 
 /* ==========================================================================
    Hero
@@ -1372,11 +1415,12 @@ ul { list-style: none; padding: 0; }
   box-shadow: 0 10px 26px rgba(24, 26, 30, 0.32);
 }
 .mobile-fab svg { width: 20px; height: 20px; fill: currentColor; }
-@media (max-width: 1240px) {
+@media (max-width: 1024px) {
   :root { --header-h: 64px; }
   .site-header, .site-header.is-scrolled { --logo-h: 46px; }
+  .wordmark { margin-right: auto; }
   .site-nav { display: none; }
-  .header-aside { display: none; }
+  .header-cta-btn { display: none; }
   .nav-toggle { display: flex; }
 }
 @media (max-width: 1024px) {

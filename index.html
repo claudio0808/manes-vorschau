@@ -31,7 +31,7 @@
 <link rel="preload" href="fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/source-sans-3-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" as="image" href="images/manes_slider2.jpg" fetchpriority="high">
-<link rel="stylesheet" href="style.css?v=83">
+<link rel="stylesheet" href="style.css?v=84">
 
 <script type="application/ld+json">
 {
@@ -100,13 +100,48 @@
       <span class="sr-only">Manes am Bösch, Gaststätte seit 1860</span>
     </a>
 
-    <div class="header-aside">
-      <a class="header-rating" href="https://www.google.com/maps/search/?api=1&amp;query=Manes+am+B%C3%B6sch+Dormagen" target="_blank" rel="noopener" aria-label="4,7 von 5 Sternen aus 1.540 Google-Bewertungen">
-        <span class="header-rating-stars" aria-hidden="true">★★★★★</span>
-        <span class="header-rating-text"><strong data-rating-wert>4,7</strong> &middot; <span data-rating-anzahl>1.540</span> Bewertungen</span>
-      </a>
-      <a class="btn btn-primary header-cta-btn" href="reservierung-restaurant.html">Reservieren</a>
-    </div>
+    <nav class="site-nav" id="hauptnavigation" aria-label="Hauptnavigation">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <button type="button" class="nav-top" data-nav-top aria-expanded="false" aria-haspopup="true">Aktuelles<svg class="nav-caret" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5 6 6.5 11 1.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="nav-menu" data-nav-menu role="menu">
+            <a href="#aktuelles" role="menuitem">Neues aus dem Haus</a>
+            <a href="veranstaltungen.html" role="menuitem">Veranstaltungen</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <button type="button" class="nav-top" data-nav-top aria-expanded="false" aria-haspopup="true">Speisekarte<svg class="nav-caret" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5 6 6.5 11 1.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="nav-menu" data-nav-menu role="menu">
+            <a href="#speisekarte" role="menuitem">Reguläre Karte</a>
+            <a href="#steak-freitag" role="menuitem">Steak-Freitag</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <button type="button" class="nav-top" data-nav-top aria-expanded="false" aria-haspopup="true">Räume &amp; Feiern<svg class="nav-caret" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5 6 6.5 11 1.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="nav-menu" data-nav-menu role="menu">
+            <a href="#raeumlichkeiten" role="menuitem">Unsere Räume</a>
+            <a href="reservierung-saal.html" role="menuitem">Saal / Gesellschaften</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <button type="button" class="nav-top" data-nav-top aria-expanded="false" aria-haspopup="true">Das Haus<svg class="nav-caret" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5 6 6.5 11 1.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="nav-menu" data-nav-menu role="menu">
+            <a href="#geschichte" role="menuitem">Geschichte</a>
+            <a href="#stimmen" role="menuitem">Bewertungen</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <button type="button" class="nav-top" data-nav-top aria-expanded="false" aria-haspopup="true">Kontakt<svg class="nav-caret" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5 6 6.5 11 1.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="nav-menu" data-nav-menu role="menu">
+            <a href="#anfahrt" role="menuitem">Anfahrt</a>
+            <a href="#oeffnungszeiten" role="menuitem">Öffnungszeiten</a>
+            <a href="#newsletter" role="menuitem">Newsletter</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <a class="btn btn-primary header-cta-btn" href="reservierung-restaurant.html">Reservieren</a>
 
     <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="mobilnavigation" aria-label="Menü öffnen">
       <span class="nav-toggle-bar"></span>
@@ -115,34 +150,46 @@
     </button>
   </div>
 
-  <nav class="site-nav" id="hauptnavigation" aria-label="Hauptnavigation">
-    <ul class="nav-list">
-      <li><a href="#aktuelles">Aktuelles</a></li>
-      <li><a href="#speisekarte">Speisekarte</a></li>
-      <li><a href="#steak-freitag">Steak-Freitag</a></li>
-      <li><a href="#raeumlichkeiten">Räumlichkeiten</a></li>
-      <li><a href="#geschichte">Geschichte</a></li>
-      <li><a href="#stimmen">Bewertungen</a></li>
-      <li><a href="#anfahrt">Anfahrt</a></li>
-      <li><a href="#oeffnungszeiten">Öffnungszeiten</a></li>
-      <li><a href="#newsletter">Newsletter</a></li>
-    </ul>
-  </nav>
-
   <div class="mobile-nav" id="mobilnavigation" data-mobile-nav hidden>
     <ul class="mobile-nav-list">
-      <li><a href="#aktuelles">Aktuelles</a></li>
-      <li><a href="#speisekarte">Speisekarte</a></li>
-      <li><a href="#steak-freitag">Steak-Freitag</a></li>
-      <li><a href="#raeumlichkeiten">Räumlichkeiten</a></li>
-      <li><a href="#geschichte">Geschichte</a></li>
-      <li><a href="#stimmen">Bewertungen</a></li>
-      <li><a href="#anfahrt">Anfahrt und Kontakt</a></li>
-      <li><a href="#oeffnungszeiten">Öffnungszeiten</a></li>
-      <li><a href="#reservierung">Reservierung</a></li>
-      <li><a href="#newsletter">Newsletter</a></li>
+      <li class="m-group">
+        <button type="button" class="m-top" data-m-top aria-expanded="false">Aktuelles<svg class="nav-caret" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5 6 6.5 11 1.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="m-sub" data-m-sub hidden>
+          <a href="#aktuelles">Neues aus dem Haus</a>
+          <a href="veranstaltungen.html">Veranstaltungen</a>
+        </div>
+      </li>
+      <li class="m-group">
+        <button type="button" class="m-top" data-m-top aria-expanded="false">Speisekarte<svg class="nav-caret" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5 6 6.5 11 1.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="m-sub" data-m-sub hidden>
+          <a href="#speisekarte">Reguläre Karte</a>
+          <a href="#steak-freitag">Steak-Freitag</a>
+        </div>
+      </li>
+      <li class="m-group">
+        <button type="button" class="m-top" data-m-top aria-expanded="false">Räume &amp; Feiern<svg class="nav-caret" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5 6 6.5 11 1.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="m-sub" data-m-sub hidden>
+          <a href="#raeumlichkeiten">Unsere Räume</a>
+          <a href="reservierung-saal.html">Saal / Gesellschaften</a>
+        </div>
+      </li>
+      <li class="m-group">
+        <button type="button" class="m-top" data-m-top aria-expanded="false">Das Haus<svg class="nav-caret" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5 6 6.5 11 1.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="m-sub" data-m-sub hidden>
+          <a href="#geschichte">Geschichte</a>
+          <a href="#stimmen">Bewertungen</a>
+        </div>
+      </li>
+      <li class="m-group">
+        <button type="button" class="m-top" data-m-top aria-expanded="false">Kontakt<svg class="nav-caret" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5 6 6.5 11 1.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="m-sub" data-m-sub hidden>
+          <a href="#anfahrt">Anfahrt</a>
+          <a href="#oeffnungszeiten">Öffnungszeiten</a>
+          <a href="#newsletter">Newsletter</a>
+        </div>
+      </li>
     </ul>
-    <a class="btn btn-primary btn-block" href="#reservierung">Reservierungsanfrage</a>
+    <a class="btn btn-primary btn-block" href="reservierung-restaurant.html">Reservieren</a>
   </div>
 </header>
 
@@ -699,7 +746,7 @@
 </footer>
 
 <a href="#reservierung" class="mobile-fab" aria-label="Zur Reservierungsanfrage"><svg viewBox="0 0 24 24" aria-hidden="true" fill-rule="evenodd"><path d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1V3a1 1 0 0 1 1-1Zm13 7H4v10a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V9Z"/></svg><span>Reservieren</span></a>
-<script src="script.js?v=13" defer></script>
+<script src="script.js?v=14" defer></script>
 <script src="site-content.js?v=1" defer></script>
 <script src="veranstaltungen.js?v=4" defer></script>
 <script src="vendor/pdfjs/pdf.min.js" defer></script>
