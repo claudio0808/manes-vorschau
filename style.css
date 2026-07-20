@@ -1707,19 +1707,19 @@ ul { list-style: none; padding: 0; }
 .vk:hover .vk-mehr svg { transform: translateX(4px); }
 .vk-leer { grid-column: 1 / -1; text-align: center; color: var(--ink-soft); font-style: italic; padding: 2rem 0; }
 /* Platzhalter-Karte (gleiches Format wie eine Veranstaltung), signalisiert "bald mehr" */
-.vk-ph { background: #FCFAF3; border: 1.5px dashed var(--line-gold); box-shadow: none; }
-.vk-ph:hover { transform: none; box-shadow: none; border-color: var(--line-gold); }
+.vk-ph { background: var(--surface); border: 1.5px dashed var(--line); box-shadow: none; }
+.vk-ph:hover { transform: none; box-shadow: none; border-color: var(--line); }
 .vk-ph-bild {
   aspect-ratio: 1 / 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(170, 135, 63, 0.05);
-  color: var(--gold);
+  background: var(--bg);
+  color: var(--ink-soft);
 }
-.vk-ph-orn { width: 52px; height: 52px; opacity: 0.5; }
-.vk-ph .vk-body { border-top: 3px solid var(--line-gold); }
-.vk-ph .vk-titel { color: var(--gold-ink); }
+.vk-ph-orn { width: 46px; height: 46px; opacity: 0.4; }
+.vk-ph .vk-body { border-top: 3px solid var(--gold); }
+.vk-ph .vk-titel { color: var(--anthracite); }
 
 .aktuelles-cta { text-align: center; margin-top: clamp(1.6rem, 3vw, 2.4rem); }
 

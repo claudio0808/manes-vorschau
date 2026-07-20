@@ -37,7 +37,7 @@
   /* Platzhalter-Karte im gleichen Format: signalisiert "bald mehr" */
   function placeholderCardHTML() {
     return '<div class="vk vk-ph reveal">'
-      + '<div class="vk-ph-bild"><svg class="vk-ph-orn" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 5 L29 20 L20 35 L11 20 Z" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="20" cy="20" r="2" fill="currentColor"/></svg></div>'
+      + '<div class="vk-ph-bild"><svg class="vk-ph-orn" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="7" y="11" width="34" height="30" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M7 19h34M16 7v7M32 7v7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="17" cy="27" r="1.5" fill="currentColor"/><circle cx="24" cy="27" r="1.5" fill="currentColor"/><circle cx="31" cy="27" r="1.5" fill="currentColor"/><circle cx="17" cy="34" r="1.5" fill="currentColor"/><circle cx="24" cy="34" r="1.5" fill="currentColor"/></svg></div>'
       + '<div class="vk-body">'
       + '<span class="vk-kat">Veranstaltung</span>'
       + '<h3 class="vk-titel">Mehr in Kürze</h3>'
