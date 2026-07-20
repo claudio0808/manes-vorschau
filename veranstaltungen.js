@@ -34,6 +34,17 @@
       + '</a>';
   }
 
+  /* Platzhalter-Karte im gleichen Format: signalisiert "bald mehr" */
+  function placeholderCardHTML() {
+    return '<div class="vk vk-ph reveal">'
+      + '<div class="vk-ph-bild"><svg class="vk-ph-orn" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 5 L29 20 L20 35 L11 20 Z" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="20" cy="20" r="2" fill="currentColor"/></svg></div>'
+      + '<div class="vk-body">'
+      + '<span class="vk-kat">Veranstaltung</span>'
+      + '<h3 class="vk-titel">Mehr in Kürze</h3>'
+      + '<p class="vk-teaser">Neue Termine und Aktionen kündigen wir hier bald an.</p>'
+      + '</div></div>';
+  }
+
   /* gestaffelte Einblendung der eingefügten Karten, sobald sichtbar */
   function revealInjected(container) {
     var cards = Array.prototype.slice.call(container.querySelectorAll(".reveal"));
@@ -97,16 +108,10 @@
     var list = actives(data);
     if (featEl) {
       var feat = list.filter(function (v) { return v.featured && !v.vorbei; });
-      if (feat.length) {
-        renderGrid(featEl, feat.slice(0, 3), "");
-      } else {
-        featEl.innerHTML = '<div class="vk-platzhalter reveal">'
-          + '<span class="vk-platzhalter-eyebrow">Veranstaltungen</span>'
-          + '<p class="vk-platzhalter-titel">Mehr in Kürze</p>'
-          + '<p class="vk-platzhalter-text">Neue Termine und Aktionen kündigen wir hier in Kürze an.</p>'
-          + '</div>';
-        revealInjected(featEl);
-      }
+      var cards = feat.slice(0, 3).map(cardHTML);
+      while (cards.length < 3) { cards.push(placeholderCardHTML()); }
+      featEl.innerHTML = cards.join("");
+      revealInjected(featEl);
     }
     if (listeEl) { renderGrid(listeEl, list, "Aktuell sind keine Veranstaltungen angekündigt."); }
     if (detailEl) { renderDetail(detailEl, data, paramId()); }
