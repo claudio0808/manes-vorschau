@@ -88,7 +88,7 @@
   --shadow-md: 0 18px 44px rgba(25, 27, 30, 0.16);
   --shadow-lg: 0 30px 70px rgba(25, 27, 30, 0.28);
 
-  --header-h: 92px;
+  --header-h: 122px;
   --ticker-h: 40px;
 }
 
@@ -275,7 +275,7 @@ ul { list-style: none; padding: 0; }
    Ganz oben transparent über dem Hero, beim Scrollen solide dunkel wie der Footer.
    ========================================================================== */
 .site-header {
-  --logo-h: 76px;
+  --logo-h: 108px;
   position: fixed;
   inset: var(--ticker-h) 0 auto 0;
   z-index: 100;
@@ -374,7 +374,7 @@ ul { list-style: none; padding: 0; }
 
 /* scrolled: solide dunkel wie der Footer + Schatten */
 .site-header.is-scrolled {
-  --logo-h: 52px;
+  --logo-h: 50px;
   background: var(--anthracite-deep);
   border-bottom-color: var(--line-gold);
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
@@ -1415,8 +1415,8 @@ ul { list-style: none; padding: 0; }
 }
 .mobile-fab svg { width: 20px; height: 20px; fill: currentColor; }
 @media (max-width: 1024px) {
-  :root { --header-h: 64px; }
-  .site-header, .site-header.is-scrolled { --logo-h: 46px; }
+  :root { --header-h: 70px; }
+  .site-header, .site-header.is-scrolled { --logo-h: 52px; }
   .wordmark { margin-right: auto; }
   .site-nav { display: none; }
   .header-cta-btn { display: none; }
