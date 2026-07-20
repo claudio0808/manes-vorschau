@@ -1804,8 +1804,8 @@ ul { list-style: none; padding: 0; }
 .karten-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: clamp(1.6rem, 4vw, 2.6rem);
-  max-width: 1020px;
+  gap: clamp(1.4rem, 3vw, 2.2rem);
+  max-width: 800px;
   margin-inline: auto;
 }
 .pdf-karte {
@@ -1832,7 +1832,7 @@ ul { list-style: none; padding: 0; }
 }
 .pdf-karte-marke { font-weight: 700; font-size: 0.74rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold-ink); }
 .pdf-karte .menukarte-geweih { display: block; margin: 0.9rem auto 0.7rem; color: var(--gold); }
-.pdf-karte-titel { font-family: var(--font-title); font-weight: 700; font-size: clamp(1.4rem, 1rem + 1.4vw, 1.9rem); letter-spacing: 0.01em; color: var(--anthracite); }
+.pdf-karte-titel { font-family: var(--font-title); font-weight: 700; font-size: clamp(1.15rem, 0.85rem + 1vw, 1.5rem); letter-spacing: 0.01em; color: var(--anthracite); }
 .pdf-karte-sub { font-family: var(--font-display); font-style: italic; font-size: 1.02rem; color: var(--ink-soft); margin-top: 0.4rem; }
 .pdf-karte-badge-plain { background: transparent; color: var(--gold-ink); border: 1px solid var(--line-gold); }
 .pdf-karte-links { margin-top: auto; padding-top: 1.4rem; display: flex; gap: 0.7rem; }
@@ -1841,7 +1841,7 @@ ul { list-style: none; padding: 0; }
 .pdf-btn svg { flex: none; }
 
 /* Innen + Außen als zwei Vorschauen */
-.pdf-doppel { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 1.2rem; margin-bottom: 1.3rem; }
+.pdf-doppel { display: grid; grid-template-columns: 1fr; gap: 0.7rem; margin-top: 1.1rem; margin-bottom: 1.2rem; }
 .pdf-vorschau-fig { margin: 0; }
 .pdf-vorschau-fig figcaption {
   margin-top: 0.5rem;
