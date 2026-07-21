@@ -177,7 +177,8 @@ ul { list-style: none; padding: 0; }
 
 .section {
   padding-block: var(--section-y);
-  min-height: 100dvh;
+  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -474,7 +475,7 @@ ul { list-style: none; padding: 0; }
 .hero {
   position: relative;
   min-height: 100vh;
-  min-height: 100dvh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   padding-top: calc(var(--header-h) + var(--ticker-h) + clamp(2rem, 6vw, 4.5rem));
@@ -933,7 +934,8 @@ ul { list-style: none; padding: 0; }
   background: var(--bg);
   color: var(--ink);
   padding-block: var(--section-y);
-  min-height: 100dvh;
+  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
   justify-content: center;
