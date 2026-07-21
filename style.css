@@ -184,6 +184,7 @@ ul { list-style: none; padding: 0; }
   justify-content: center;
 }
 .section-head { max-width: var(--wrap-narrow); margin-bottom: clamp(1.8rem, 3.5vw, 2.6rem); }
+.section-speisekarte .section-intro { max-width: none; }
 
 /* keep anchored section titles clear of the fixed header */
 .section, .panel-steak, .hero, #oeffnungszeiten { scroll-margin-top: calc(var(--header-h) + 8px); }
