@@ -485,18 +485,7 @@ ul { list-style: none; padding: 0; }
   isolation: isolate;
 }
 .hero-media { position: absolute; inset: 0; z-index: -2; }
-.hero-media img {
-  width: 100%; height: 100%; object-fit: cover;
-  transform-origin: 50% 55%;
-  animation: hero-kenburns 26s ease-in-out infinite alternate;
-}
-@keyframes hero-kenburns {
-  from { transform: scale(1.05); }
-  to { transform: scale(1.16); }
-}
-@media (prefers-reduced-motion: reduce) {
-  .hero-media img { animation: none; transform: scale(1.05); }
-}
+.hero-media img { width: 100%; height: 100%; object-fit: cover; }
 .hero-overlay {
   position: absolute; inset: 0; z-index: -1;
   background:
