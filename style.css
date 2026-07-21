@@ -197,7 +197,11 @@ ul { list-style: none; padding: 0; }
   align-items: center;
   gap: 1.1rem;
   width: min(560px, calc(100% - 2 * var(--gutter)));
+  height: 20px;
   margin-inline: auto;
+  margin-block: -10px;
+  position: relative;
+  z-index: 1;
   color: var(--gold);
 }
 .zier-trenner::before,
