@@ -932,9 +932,7 @@ ul { list-style: none; padding: 0; }
    Steak-Freitag panel (heller Look, dezent warm)
    ========================================================================== */
 .panel-steak {
-  background:
-    radial-gradient(120% 90% at 85% 12%, rgba(170, 135, 63, 0.08), transparent 55%),
-    linear-gradient(180deg, var(--surface), var(--bg) 70%);
+  background: var(--bg);
   color: var(--ink);
   padding-block: var(--section-y);
   min-height: 100vh;
