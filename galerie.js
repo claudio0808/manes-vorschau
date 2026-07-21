@@ -36,6 +36,7 @@
         b.innerHTML = '<img src="' + base + attr(name) + '-t.webp" alt="' + attr(g.titel) + ", Bild " + (i + 1) + '" loading="lazy" decoding="async">';
         grid.appendChild(b);
       });
+      grid.style.setProperty("--cols", String(Math.min(6, Math.max(2, Math.ceil(Math.sqrt(bilder.length || 1))))));
 
       /* ---- Lightbox ---- */
       var lb = document.createElement("div");

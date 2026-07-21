@@ -2118,21 +2118,20 @@ ul { list-style: none; padding: 0; }
   text-transform: uppercase;
   color: var(--gold-ink);
 }
-.galerie-grid { column-count: 3; column-gap: 14px; }
+.galerie-grid { display: grid; grid-template-columns: repeat(var(--cols, 3), 1fr); gap: 14px; }
 .galerie-leer { color: var(--ink-soft); }
 .galerie-tile {
   display: block;
   width: 100%;
   padding: 0;
   border: 0;
-  margin: 0 0 14px;
+  margin: 0;
   background: #e5e2db;
   cursor: pointer;
   overflow: hidden;
-  break-inside: avoid;
   box-shadow: var(--shadow-sm);
 }
-.galerie-tile img { width: 100%; height: auto; display: block; transition: transform 0.5s ease, opacity 0.2s ease; }
+.galerie-tile img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; transition: transform 0.5s ease, opacity 0.2s ease; }
 .galerie-tile:hover img { transform: scale(1.05); }
 .galerie-tile:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
 
@@ -2144,8 +2143,8 @@ ul { list-style: none; padding: 0; }
 }
 .galerie-cta p { font-family: var(--font-display); font-style: italic; font-size: 1.2rem; color: var(--ink); margin-bottom: 1.3rem; }
 
-@media (max-width: 900px) { .galerie-grid { column-count: 2; } }
-@media (max-width: 520px) { .galerie-grid { column-count: 1; max-width: 460px; margin-inline: auto; } }
+@media (max-width: 900px) { .galerie-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 520px) { .galerie-grid { grid-template-columns: repeat(2, 1fr); } }
 
 /* ==========================================================================
    Geschichte-Bildergalerie
@@ -2161,7 +2160,7 @@ ul { list-style: none; padding: 0; }
 }
 .gg-grid {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(var(--cols, 4), 1fr);
   gap: clamp(0.6rem, 1vw, 0.85rem);
 }
 @media (max-width: 900px) { .gg-grid { grid-template-columns: repeat(4, 1fr); } }

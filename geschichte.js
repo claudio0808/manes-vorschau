@@ -134,6 +134,7 @@
             '<img src="images/geschichte/' + attr(it.bild) + '-t.webp" alt="' + attr(cap) + '" loading="lazy" decoding="async">' +
             '<span class="gg-cap">' + esc(cap) + '</span></button>';
         }).join("");
+        grid.style.setProperty("--cols", String(Math.min(6, Math.max(2, Math.ceil(Math.sqrt(data.geschichte.length || 1))))));
         wireLightbox(Array.prototype.slice.call(grid.querySelectorAll(".gg-tile")), "Das Haus im Wandel der Zeit");
       } else {
         fallbackGeschichte();
