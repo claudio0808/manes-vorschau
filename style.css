@@ -2409,10 +2409,6 @@ a.news-bar:hover .news-text { color: #fff; }
   text-transform: uppercase;
   color: var(--gold-ink);
 }
-/* Faktische Highlight-Karten (echte Bewertung im Titel, keine erfundenen Zitate) */
-.stimme-orn { display: block; color: var(--gold); font-size: 0.85rem; letter-spacing: 0.3em; margin-bottom: 0.9rem; }
-.stimme-titel { font-family: var(--font-title); font-weight: 700; font-size: clamp(1.1rem, 0.9rem + 0.6vw, 1.3rem); letter-spacing: 0.02em; color: var(--anthracite); }
-.stimme-text { margin-top: 0.6rem; color: var(--ink-soft); font-size: 1rem; line-height: 1.55; }
 .stimmen-fuss { margin-top: clamp(1.8rem, 3.5vw, 2.6rem); text-align: center; }
 .stimmen-fuss p { font-family: var(--font-display); font-style: italic; color: var(--ink-soft); margin-bottom: 1rem; }
 @media (max-width: 900px) { .stimmen-grid { grid-template-columns: 1fr; max-width: 520px; margin-inline: auto; } }
