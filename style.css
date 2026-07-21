@@ -928,11 +928,13 @@ ul { list-style: none; padding: 0; }
 .menukarte-download .btn svg { margin-right: 0.15em; }
 
 /* ==========================================================================
-   Steak-Freitag panel (full-bleed green)
+   Steak-Freitag panel (dunkler Steakhouse-Look)
    ========================================================================== */
 .panel-steak {
-  background: var(--bg);
-  color: var(--ink);
+  background:
+    radial-gradient(115% 85% at 12% 18%, rgba(170, 135, 63, 0.16), transparent 55%),
+    linear-gradient(160deg, var(--anthracite) 0%, var(--anthracite-deep) 100%);
+  color: var(--light-on-dark);
   padding-block: var(--section-y);
   min-height: 100vh;
   min-height: 100svh;
@@ -947,12 +949,14 @@ ul { list-style: none; padding: 0; }
   align-items: stretch;
 }
 .panel-steak-text { display: flex; flex-direction: column; align-items: flex-start; }
-.panel-steak-lead { margin-top: 1.3rem; max-width: 54ch; color: var(--ink-soft); font-size: 1.1rem; }
+.panel-steak-lead { margin-top: 1.3rem; max-width: 54ch; color: rgba(236, 237, 239, 0.82); font-size: 1.1rem; }
 .panel-steak-hint {
   margin-top: 1.8rem;
   font-style: italic;
-  color: var(--gold-ink);
+  color: var(--gold-soft);
 }
+.panel-steak .eyebrow { color: var(--gold-soft); }
+.panel-steak .section-title { color: var(--light-on-dark); }
 .panel-steak-text > .btn { margin-top: auto; }
 
 .panel-steak-media {
