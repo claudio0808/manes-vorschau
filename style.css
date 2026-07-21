@@ -2160,7 +2160,7 @@ ul { list-style: none; padding: 0; }
 }
 .gg-grid {
   display: grid;
-  grid-template-columns: repeat(var(--cols, 4), 1fr);
+  grid-template-columns: repeat(7, 1fr);
   gap: clamp(0.6rem, 1vw, 0.85rem);
 }
 @media (max-width: 900px) { .gg-grid { grid-template-columns: repeat(4, 1fr); } }
