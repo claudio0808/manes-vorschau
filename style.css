@@ -2344,7 +2344,7 @@ a.news-bar:hover .news-text { color: #fff; }
 }
 
 .footer-tel-hinweis {
-  margin: 0.7rem 0 0;
+  margin-top: 0.7rem;
   max-width: 34ch;
   font-size: 0.8rem;
   font-style: italic;
