@@ -1330,7 +1330,7 @@ ul { list-style: none; padding: 0; }
   display: grid;
   grid-template-columns: 1.3fr 1fr 1fr 1.15fr;
   gap: 2.2rem 3.5rem;
-  padding-block: clamp(3rem, 5vw, 4.8rem);
+  padding-block: clamp(1.8rem, 3.5vw, 2.8rem);
   align-items: start;
 }
 .footer-logo { width: 112px; max-width: 55%; height: auto; margin-bottom: 1.2rem; }
