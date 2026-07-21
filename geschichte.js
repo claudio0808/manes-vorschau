@@ -91,7 +91,7 @@
   /* ---- Steak-Karte: Klick vergrößert das Bild (PDF nur über den Button) ---- */
   var steak = document.querySelector(".steak-karte-vorschau");
   if (steak) {
-    steak.setAttribute("data-full", "images/steak-karte.webp?v=3");
+    steak.setAttribute("data-full", "images/steak-karte.webp?v=4");
     steak.setAttribute("data-caption", "Unsere Steak-Karte, jeden Freitag von 11:30 bis 15:00 Uhr");
     wireLightbox([steak], "Steak-Freitag");
   }

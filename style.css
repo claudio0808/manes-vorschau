@@ -990,7 +990,7 @@ ul { list-style: none; padding: 0; }
   letter-spacing: 0.03em;
 }
 .steak-badge svg { flex: none; color: var(--gold); }
-.panel-steak-text > .btn { margin-top: 3.2rem; }
+.panel-steak-text > .btn { margin-top: auto; }
 
 .panel-steak-media {
   display: flex;
@@ -1546,6 +1546,7 @@ ul { list-style: none; padding: 0; }
   .aushang-brett { grid-template-columns: repeat(2, 1fr); }
   .feiern-grid { grid-template-columns: repeat(2, 1fr); }
   .panel-steak-inner { grid-template-columns: 1fr; }
+  .panel-steak-text > .btn { margin-top: 2rem; }
   .steak-karte-dl { margin-top: 1.6rem; }
   .panel-steak-media { margin-top: 0.5rem; }
   .reservierung-grid { grid-template-columns: 1fr; }
