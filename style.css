@@ -1266,6 +1266,18 @@ ul { list-style: none; padding: 0; }
   font-style: italic;
   color: var(--ink-soft);
 }
+.newsletter-hint a {
+  color: var(--gold-ink);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--line-gold);
+  text-underline-offset: 2px;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+.newsletter-hint a:hover {
+  color: var(--gold);
+  text-decoration-color: var(--gold);
+}
 
 /* visually hidden, aber fuer Screenreader vorhanden */
 .sr-only {
