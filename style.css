@@ -1328,7 +1328,7 @@ ul { list-style: none; padding: 0; }
 .site-footer { background: var(--anthracite-deep); color: rgba(236, 237, 239, 0.82); }
 .footer-inner {
   display: grid;
-  grid-template-columns: 1.3fr 1fr 1fr 0.8fr;
+  grid-template-columns: 1.3fr 1fr 1fr 1.15fr;
   gap: 1.6rem 2.5rem;
   padding-block: clamp(1.8rem, 3.5vw, 2.8rem);
   align-items: start;
@@ -1352,6 +1352,7 @@ ul { list-style: none; padding: 0; }
 .footer-hours li { display: flex; justify-content: space-between; gap: 1.5rem; border-bottom: 1px solid rgba(170, 135, 63, 0.16); padding-bottom: 0.45rem; }
 .footer-hours li span:last-child { color: rgba(236, 237, 239, 0.7); white-space: nowrap; }
 .footer-links { display: flex; flex-direction: column; gap: 0.55rem; font-size: 0.96rem; }
+.footer-social-text { max-width: 26ch; font-size: 0.88rem; line-height: 1.5; color: rgba(236, 237, 239, 0.62); margin-bottom: 1rem; }
 .footer-social { display: flex; flex-direction: row; flex-wrap: wrap; gap: 0.7rem; }
 .footer-social a {
   display: inline-flex; align-items: center; justify-content: center;
