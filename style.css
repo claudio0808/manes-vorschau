@@ -990,7 +990,7 @@ ul { list-style: none; padding: 0; }
   letter-spacing: 0.03em;
 }
 .steak-badge svg { flex: none; color: var(--gold); }
-.panel-steak-text > .btn { margin-top: 4.5rem; }
+.panel-steak-text > .btn { margin-top: 3.2rem; }
 
 .panel-steak-media {
   display: flex;
