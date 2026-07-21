@@ -202,10 +202,10 @@ ul { list-style: none; padding: 0; }
 .zier-trenner::after {
   content: "";
   flex: 1;
-  height: 1px;
+  height: 2px;
   background: var(--line-gold);
 }
-.zier-trenner svg { display: block; flex: none; }
+.zier-trenner svg { display: block; flex: none; width: 120px; height: auto; }
 
 /* ---------- Buttons: eckig, Doppellinien-Border, Fuellung laeuft von unten ein ---------- */
 .btn {
